@@ -1,28 +1,26 @@
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-    <display-name>Learning Apache Camel</display-name>
+	<display-name>Learning Apache Camel</display-name>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-            classpath:camel-config.xml
-        </param-value>
-    </context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:camel-config.xml</param-value>
+	</context-param>
 
-    <!-- the listener that kick-starts Spring, which loads the XML files and start our application -->
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+	<!-- the listener that kick-starts Spring, which loads the XML files and 
+		start our application -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
-    <servlet>
-        <servlet-name>example</servlet-name>
-        <servlet-class>example.ExampleServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>example</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
-
+	<servlet>
+		<servlet-name>example</servlet-name>
+		<servlet-class>example.ExampleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>example</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
 </web-app>
